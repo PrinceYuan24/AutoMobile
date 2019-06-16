@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="lab0" name="fig8" type="fig8.py" output='screen'>
+    </node>
+</launch>

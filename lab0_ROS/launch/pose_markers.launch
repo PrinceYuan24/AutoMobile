@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="lab0" name="pose_markers" type="pose_markers.py" output='screen'>
+    </node>
+</launch>

@@ -1,0 +1,20 @@
+5.
+(a). 
+There were no noticeable differences between the two performances, however, some other group had s-path in real car when played back 8-path in sim car, some were the opposite. We thought this was because the data (steering angle, speed) between sim car and real car were not calibrated.
+
+
+(b).
+The playing back trajectory did not match the trajectory we recorded before. Because the car could not exactly follow the steering angle and the speed we published.
+
+
+(c).
+We did both of them.
+
+(4.1)
+The figure-8 path is achieved with two circles, clockwise and counterclockwise.
+We first measured the distance between two shafts, L, then used R=L/tan(delta) to get the radius of the circle. After that we got the time steps to run the path with given rate.
+During the process we found that the value between real measured data and estimated data were different so we multiplied a constant number in the code.
+
+(4.2).
+First we found all the range value corresponding to intensity=10 from the Ladar data. Then find the smallest range and if this is below given threshold we set, we will publish the data with speed=0 to override.
+

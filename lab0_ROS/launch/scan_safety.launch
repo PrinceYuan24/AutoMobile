@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="lab0" name="scan_safety" type="scan_safety.py" output='screen'>
+    </node>
+</launch>

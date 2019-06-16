@@ -1,0 +1,9 @@
+<launch>
+    <arg name="plan_file" default="$(find lab0)/Bags/sim-figure8.bag" />
+    <arg name="reverse" default="False" />
+
+    <node pkg="lab0" name="bag_follower" type="bag_follower.py" output='screen'> 
+        <param name="plan_file" value="$(arg plan_file)" />
+        <param name="reverse" value="$(arg reverse)" />
+    </node>
+</launch>

@@ -1,0 +1,10 @@
+<launch>
+    <include file="$(find lab0)/launch/publisher.launch" />
+   
+    <node pkg="lab0" name="subscriber" type="subscriber.py" output='screen'>
+        <param name="t_pub" value="ackermann_masgs/AckermannDriverStamped"/>
+
+        <param name="s_reset" value="~reset" />
+
+    </node>
+</launch>
