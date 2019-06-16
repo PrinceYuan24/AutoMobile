@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="lab3" name="goals_markers" type="goals_markers.py" output='screen'>
+    </node>
+</launch>
