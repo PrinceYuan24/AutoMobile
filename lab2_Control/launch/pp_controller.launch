@@ -1,0 +1,10 @@
+<launch>
+    <arg name="type" default="PP" />
+
+    <include file="$(find mushr_sim)/launch/teleop.launch" />
+    <include file="$(find lab2)/launch/map_server.launch" />
+    <node pkg="lab2" type="main.py" name="main" output="screen" />
+    	<param name="/controller/type" value="$(arg type)"/>
+
+    <node pkg="lab2" type="runner_script.py" name="runner_script" output="screen" cwd="node"/>
+</launch>

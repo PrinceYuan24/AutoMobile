@@ -1,0 +1,12 @@
+<launch>
+    <arg name="type" default="MPC" />
+    <arg name="pose_topic" default="pf/viz/inferred_pose" />
+
+    <include file="$(find mushr_sim)/launch/teleop.launch" />
+    <include file="$(find lab2)/launch/map_server.launch" />
+    <node pkg="lab2" type="main.py" name="main" output="screen" />
+    	<param name="/controller/type" value="$(arg type)"/>
+    	
+    <node pkg="lab2" type="runner_script.py" name="runner_script" output="screen" cwd="node"/>
+    	<param name="pose_topic" value="$(arg pose_topic)"/>
+</launch>

@@ -1,0 +1,1 @@
+<arg name="map_file" default="$(find lab2)/scripts/cse022_demo.yaml" />

@@ -1,0 +1,9 @@
+<launch>
+    <arg name="type" default="PID" />
+
+    <node pkg="lab2" type="main.py" name="main" output="screen" />
+    	<param name="/controller/type" value="$(arg type)"/>
+
+    <node pkg="lab2" type="runner_script.py" name="runner_script" output="screen" cwd="node"/>
+</launch>
+
